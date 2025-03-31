@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles.css">
+    
+</head>
+
+<body>
+    
+    <!--INICIO DO CABEÇALHO-->
+    
+    <header class="cabecalho">
+        <div class="container">
+            <span class="cabecalho__menu-hamburguer container__imagem"></span>
+            <img src="assest/logo.jpeg" alt="Logo da Alura" class="container__imagem">
+        <!--INICIO TABLET-->
+        <h1 class="container__titulo"><b class="container__titulo--negrito">Book</b>Mania</h1>
+        </div>
+        <ul class="opcoes">
+            <li class="opcoes__itens">
+                <a class="opcoes__link" href="#">Categorias</a>
+            </li>
+            <li class="opcoes__itens">
+                <a class="opcoes__link" href="#">Favoritos</a>
+            </li>
+            <li class="opcoes__itens">
+                <a class="opcoes__link" href="#">Minha estante</a>
+            </li>
+        </ul>
+           <!--FIM TABLET-->
+        <div class="container">       
+            <a href="#"><img src="assest/Favoritos.svg" class="container__imagem"></a>
+            <a href="#" class="container__link"><img src="assest/Compras.svg" class="container__imagem"></a>
+            <p class="container__texto"> Minha sacola </p> <!-- desktop-->
+            <a href="#" class="container__link"><img src="assest/Usuario.svg" class="container__imagem"></a>
+            <p class="container__texto"> Meu perfil</p> <!-- desktop-->
+        </div>
+    </header>
+
+<!--BANNER-->
+
+    <section class="banner">
+        <h2 class="banner__titulo"> Já sabe por onde começar?</h2> 
+        <p class="banner__texto">Encontre em nossa estante o que precisa!</p>
+        <input type="search" class="banner__pesquisa" placeholder= "Qual sera a proxima leitura?"> 
+    </section>
+
+<!--CARROSSEL-->    
+
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">O que há de novo</h2>
+        <!-- COLETAR O CODIGO DO CARROSSEL DO SITE https://swiperjs.com/get-started#use-swiper-from-cdn  -->
+        <div class="carrossel__container">  <!-- desktop - colocar banner ao lado do carrossel-->
+        <div class="swiper">
+            <!-- If we need pagination va para site https://swiperjs.com/swiper-api#pagination -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-wrapper">
+                <!-- COLOCAR O CAMINHO DA IMAGEM E TROCAR CONFORME SEU DIRETORIO NO MODULO DOWNLOAD ASSEST-->
+                <div class="swiper-slide"><img src="assest/principe.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assest/menino.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assest/verao.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assest/laranja.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assest/malala.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assest/coracao.jpeg" alt=""></div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- If we need scrollbar ELE DEMOSTRA UMA LINHA NA HORA QUE VC PASSA PARA OS LADO , MAS PODE SER RETIRADA -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </section>
+    
+    <script 
+        src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+    </script> 
+        
+    <!-- ESSA LINHA BUSCA NO SITE https://swiperjs.com/swiper-api#initialize-swiper -->
+   <script>
+        const swiper = new Swiper('.swiper', {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        pagination:{el: '.swiper-pagination',type: 'bullets', }
+        });
+    </script>
+
+<!--CARD-->    
+<section class="carrossel">
+    <div class="card">
+        <div class="card__descricao">
+            <div class="descricao">
+                <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>            
+                <h2 class="descricao__titulo-livro">Historias infantis e poesia</h2>
+                <p class="descricao__texto">Aproveite as datas comemorativas para presentear com livros.
+                    <br><br> Um livro é um sonho que você segura na mão. </p>
+            </div>
+            <img src="assest/leitura.jpeg" alt="imagem grande logo angular lado direito">
+        </div>
+        <div class="card__icones">
+            <ul class="icones">
+                <li class="icones__itens"><img src="assest/Favoritos.svg" alt=""></li>
+                <li class="icones__itens"><img src="assest/Compras.svg" alt=""></li>
+            </ul>
+            <a href="#" class="botao__ancora">Leia Mais</a> 
+        </div>       
+    </div> 
+</div> <!-- fechar a div que criamos para colocar o card ao lado do banner-->
+</section> 
+
+<!--TOPICOS-->  
+
+<section class="topicos">
+    <h2 class="topicos__titulo">Tópicos visistados recentemente</h2>
+    <ul class="topicos__lista">
+        <li class="topicos__itens"><a href="#" class="topicos__link">Religioso</a></li>
+        <li class="topicos__itens"><a href="#" class="topicos__link">Infanto Juvenil</a></li>
+        <li class="topicos__itens"><a href="#" class="topicos__link">Romance</a></li>
+        <li class="topicos__itens"><a href="#" class="topicos__link">Aventura</a></li>
+        <li class="topicos__itens"><a href="#" class="topicos__link">Jogos</a></li>
+        <li class="topicos__itens"><a href="#" class="topicos__link">Auto Ajuda</a></li>
+        <li class="topicos__itens"><a href="#" class="topicos__link">Culinária</a></li>
+        <li class="topicos__itens"><a href="#" class="topicos__link">Direito</a></li>  
+    </ul>
+</section>
+
+<!--CONTATO--> 
+<section class="contato">
+    <!--foi inserida a div para atender a media query--> 
+    <div class="contato__descricao">
+        <h2 class="contato__titulo"> Fique por dentro das novidades</h2> 
+        <p class="contato__texto">Atualização de todos ebooks, novos livros, promoções e outros.</p>
+    </div>
+    <input type="email" class="contato__email" placeholder= "Cadastre seu e-mail"> 
+</section>
+
+<hr/>
+
+<!--RODAPE-->
+
+<footer class="rodape">
+    <h2 class="rodape__titulo">BookMania</h2>
+
+<!--INICIO RODAPE TABLET MEDIA-->
+    <ul class="lista__rodape">
+        <li class="lista__rodape-titulo">Educação</li>
+        <li class="lista__rodape-item">
+            <img src="assest/img1.jpeg" alt="">
+            <a href="#" class="lista__rodape-link">Casa do leitor</a></li>
+        <li class="lista__rodape-item">
+            <img src="assest/img2.jpeg" alt="">
+            <a href="#" class="lista__rodape-link">Coleção</a></li>
+    </ul>
+
+    <ul class="lista__rodape">
+        <li class="lista__rodape-titulo">Educação on line</li>
+        <li class="lista__rodape-item">
+            <img src="assest/img3.jpeg" alt="">
+            <a href="#" class="lista__rodape-link">E-book</a></li>
+        <li class="lista__rodape-item">
+            <img src="assest/img4.jpeg" alt="">
+            <a href="#" class="lista__rodape-link">Livros para empresas</a></li>
+        <li class="lista__rodape-item">
+            <img src="assest/img5.jpeg" alt="">
+            <a href="#" class="lista__rodape-link">Culinária</a></li>    
+        <li class="lista__rodape-item">
+            <img src="assest/img6.jpeg" alt="">
+            <a href="#" class="lista__rodape-link">Livros cantados</a></li>    
+        </ul>
+
+        
+    <ul class="lista__rodape">
+        <li class="lista__rodape-titulo">Comunidade</li>
+        <li class="lista__rodape-item">
+            <img src="assest/img7.jpeg" alt="">
+            <a href="#" class="lista__rodape-link">Todo tipo de leitor</a></li>
+        <li class="lista__rodape-item">
+            <img src="assest/img8.jpeg" alt="">
+            <a href="#" class="lista__rodape-link">Concurseiro</a></li>
+        <li class="lista__rodape-item">
+            <img src="assest/img9.jpeg" alt="">
+            <a href="#" class="lista__rodape-link">Book.com</a></li>    
+        <li class="lista__rodape-item">
+            <img src="assest/img10.jpeg" alt="">
+            <a href="#" class="lista__rodape-link">Troca de livro</a></li>    
+        </ul>
+
+    </footer>
+</body>
+</html>

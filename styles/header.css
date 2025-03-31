@@ -1,0 +1,95 @@
+/*foi aberto esse CSS para tratar somente o cabeçaho*/
+
+
+.cabecalho__menu-hamburguer{
+    width: 24px;  /*largura*/
+    height: 24px;
+    background-image: url(../assest/Menu.svg);
+    display: inline-block; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cabecalho{
+    background-color: var(--branco);
+    display: flex; /*transformou o cabecalho*/
+    justify-content: space-between; /*deu um espaço em cada div, cada uma para seu canto*/
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem{
+    padding: 1em;
+}
+
+.container__titulo{
+    display: none;
+}
+
+.opcoes{
+    display: none;
+}
+
+.container__texto{
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+.container__titulo, .container__titulo--negrito{
+    font-family: var(--fonte-secundaria);
+    font-size: 30px;
+}
+
+.container__titulo{
+    font-weight: 400;
+    display: block;
+}
+
+.container__titulo--negrito{
+    font-weight: 700;
+}
+
+.opcoes{
+    display: flex;
+}
+
+.opcoes__itens{
+    text-transform: uppercase;
+    padding: 0 1em;
+}
+
+.opcoes__link{
+    text-decoration: none;
+    color: var(--preto);
+}
+
+.cabecalho__menu-hamburguer{
+    display: none;
+}
+}
+
+@media screen and (min-width: 1728px) {
+.container__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--preto); 
+}
+
+.cabecalho{
+    padding: 0 2em;
+}
+
+.opcoes{
+    margin-right: auto;  
+}
+
+.container__texto{
+    display: block;
+}
+
+}
